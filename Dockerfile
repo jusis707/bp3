@@ -1,4 +1,4 @@
-FROM dml.bpweb.bp.com:5000/python-36
+FROM registry.access.redhat.com/rhscl/python-35-rhel7
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
