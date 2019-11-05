@@ -11,8 +11,8 @@
 # Default directory was already set by Python container to /opt/app-root/src
 # Get Django to listen on all interfaces so we can connect from outside the container
 #CMD python3 /apache-fake-log-gen.py -n 100 -o GZ -s 10
-FROM registry.redhat.io/ubi8/python-36
-COPY . /app
+FROM registry.redhat.io/ubi8/python-27
+COPY . /app/
 WORKDIR /app
-RUN pip3 install -r requirements.txt
-CMD python3 ./apache-fake-log-gen.py -n 100 -o GZ -s 10
+RUN pip install -r requirements.txt
+CMD python ./apache-fake-log-gen.py -n 100 -o GZ -s 10
