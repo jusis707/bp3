@@ -1,4 +1,4 @@
-FROM dml.bpweb.bp.com:5000/python:3
+FROM dml.bpweb.bp.com:5000/python-27:latest
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
