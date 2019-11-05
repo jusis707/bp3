@@ -1,4 +1,4 @@
-FROM registry.redhat.io/ubi8/python-36
+FROM dml.bpweb.bp.com:5000/python-36
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
