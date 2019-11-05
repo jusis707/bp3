@@ -1,5 +1,5 @@
 FROM python:3
 COPY . /app
-ADD apache-fake-log-gen.py /
+WORKDIR /app
 RUN pip install -r requirements.txt
-CMD [ "python", "./apache-fake-log-gen.py" ]
+CMD [ "python", "/app/apache-fake-log-gen.py -n 100 -o GZ -s 10" ]
