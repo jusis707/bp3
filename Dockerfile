@@ -1,5 +1,5 @@
-FROM registry.redhat.io/ubi8/python-36
+FROM python:3
 COPY . /app
-WORKDIR /app
+ADD apache-fake-log-gen.py /
 RUN pip install -r requirements.txt
-CMD cd /app
+CMD [ "python", "./apache-fake-log-gen.py" ]
