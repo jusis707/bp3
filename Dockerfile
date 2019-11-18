@@ -1,5 +1,4 @@
-FROM alpine:3.8
-RUN apk add --no-cache bc
+FROM dml-eu.bpweb.bp.com:2222/rhel-minimal
 COPY ./entrypoint.sh /
 ENTRYPOINT ["sh", "/entrypoint.sh"]
 CMD [ "100", "5000" ]
